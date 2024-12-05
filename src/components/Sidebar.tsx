@@ -1,7 +1,11 @@
 import { FiSearch } from "react-icons/fi";
 import useNotesStore from "../Store";
+import { AiFillDelete } from "react-icons/ai";
 
 const Sidebar = () => {
+  // In your component
+  const { deleteNote } = useNotesStore();
+
   const { notes, search, selectNote, setSearch } = useNotesStore();
 
   const filteredNotes = notes.filter((note) =>
@@ -9,7 +13,7 @@ const Sidebar = () => {
   );
 
   return (
-    <div className="w-1/3 bg-white p-4 shadow-lg">
+    <div className="w-1/3 bg-white p-4 shadow-lg ">
       <div className="flex items-center mb-4">
         <FiSearch className="text-xl mr-2" />
         <input
@@ -26,7 +30,7 @@ const Sidebar = () => {
             <div
               key={index}
               onClick={() => selectNote(index)}
-              className="flex items-center p-4 mb-2 rounded-lg shadow-md cursor-pointer border hover:bg-gray-300
+              className="flex  justify-between items-center p-4 mb-2 rounded-lg shadow-md cursor-pointer border hover:bg-cyan-400
           "
             >
               <div
@@ -37,9 +41,13 @@ const Sidebar = () => {
                 }}
               />
               <div
-                className="truncate"
+                className="truncate mx-2"
                 dangerouslySetInnerHTML={{ __html: note.text }}
               />
+
+              <button onClick={() => deleteNote(index)}>
+                <AiFillDelete />
+              </button>
             </div>
           ))
         ) : (

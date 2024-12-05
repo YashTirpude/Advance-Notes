@@ -13,7 +13,7 @@ const Sidebar = () => {
   );
 
   return (
-    <div className="w-1/3 bg-white p-4 shadow-lg ">
+    <div className="w-1/3  p-4 shadow-lg ">
       <div className="flex items-center mb-4">
         <FiSearch className="text-xl mr-2" />
         <input
@@ -21,6 +21,7 @@ const Sidebar = () => {
           placeholder="Search Notes..."
           value={search}
           onChange={(e) => setSearch(e.target.value)}
+          className="placeholder-red-500 w-auto rounded-lg p-2"
         />
       </div>
 
@@ -30,8 +31,8 @@ const Sidebar = () => {
             <div
               key={index}
               onClick={() => selectNote(index)}
-              className="flex  justify-between items-center p-4 mb-2 rounded-lg shadow-md cursor-pointer border hover:bg-cyan-400
-          "
+              className={`flex  justify-between items-center p-4 mb-2 rounded-lg shadow-md cursor-pointer border hover:text-black hover:bg-cyan-400  transition duration-300
+          `}
             >
               <div
                 className="w-4 h-4 rounded-full mr-2 "

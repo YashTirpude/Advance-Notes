@@ -21,7 +21,7 @@ const App = () => {
       <div className="w-2/3 p-8">
         <ReactQuill
           placeholder="Write your note here..."
-          className="h-96 bg-white mb-[4rem]"
+          className="h-96  mb-[4rem]"
           theme="snow"
           value={editorContent}
           onChange={setEditorContent}
@@ -29,7 +29,7 @@ const App = () => {
 
         <div className="flex ml-[1rem] items-center mt-4 space-x-4 ">
           <div
-            className="relative w-10 h-10 rounded-full overflow-hidden border-2 border-red-300"
+            className="relative w-10 h-10 rounded-full overflow-hidden border-2 border-cyan-300"
             style={{ backgroundColor: noteColor }}
           >
             <input

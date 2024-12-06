@@ -21,7 +21,7 @@ const Sidebar = () => {
           placeholder="Search Notes..."
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          className="placeholder-red-500 w-auto rounded-lg p-2"
+          className="placeholder-cyan-500 w-auto rounded-lg p-2"
         />
       </div>
 

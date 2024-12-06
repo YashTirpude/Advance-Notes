@@ -18,6 +18,7 @@ const App = () => {
   return (
     <div className="h-screen flex">
       <Sidebar />
+
       <div className="w-2/3 p-8">
         <ReactQuill
           placeholder="Write your note here..."

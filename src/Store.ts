@@ -85,8 +85,8 @@ const useNotesStore = create<NotesState>()(
       },
     }),
     {
-      name: "notes-storage", // unique name for localStorage key
-      // Optional: you can specify which parts of the state to persist
+      name: "notes-storage",
+
       partialize: (state) => ({
         notes: state.notes,
       }),
